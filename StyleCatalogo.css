@@ -1,0 +1,409 @@
+html{
+    background-color: rgb(51, 106, 48);
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding-right: 400px;
+  padding-bottom: 15px;
+  margin-bottom: -10px;
+    text-decoration: none;
+  font-size: 25px;
+  color: green;
+  font-weight: bold;
+}
+.nav-item a {
+  text-decoration: none;
+  font-size: 25px;
+  color: green;
+  font-weight: bold;
+}
+.letras{
+    color: green;
+   
+
+}
+.nav-item img{
+    padding: 10px;
+}
+
+body{
+    background-color: rgb(51, 106, 48);
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.catalogo{
+    background-color: white;
+    margin-top: 40px;
+    padding-top: 25px;
+    margin-right: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: 20px;
+    padding-bottom: 70px;
+}
+
+.filtro{
+    padding-left: 0px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.Producto{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
+}
+
+.producto-col.sinscroll .Producto{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.producto-col .Producto:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.Producto.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Producto:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.Producto img{
+    max-width: 150px;
+    max-height: 150px;
+    width: 150;
+    height: 150;
+}
+
+button{
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    color: white;
+}
+
+.btn{
+    font-size: 16px;
+}
+
+.ingresarBusqueda{
+  background-color: green;
+    display: flex;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+.AplicarFiltro{
+    background-color: green;
+    display: flex;
+    margin-left: 82px;
+    margin-top: 10px;
+}
+
+.MostrarFiltros{
+    background-color: #28a745;
+    display: none;
+    padding-top: 10px;
+}
+
+.vermas{
+    background-color: #28a745;
+    color: white;
+}
+
+.titulocatalogo{
+    color: green;
+}
+
+select{
+    margin-bottom: 20px;
+}
+
+.precio{
+    margin-bottom: 10px;
+}
+
+.LimpiarFiltroId{
+    background-color: green;
+    display: flex;
+    margin-left: 82px;
+    margin-top: 10px;
+}
+
+footer{
+    background-color: white;
+    font-size: 20px;
+    margin-top: 50px;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 25px;
+    padding-bottom: 1px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+h4{
+    color: green;
+    font-size: 24px;
+}
+
+.textofooter{
+    font-size: 20px;
+    color: rgb(17, 53, 17);
+}
+
+.contacto{
+    text-align: left;
+    flex-direction: column;
+    display: flex;
+}
+
+.contacto a{
+    text-decoration: none;
+    color: green;
+}
+
+.textocontacto{
+    margin-left: 100px;
+}
+
+.contacto img{
+    margin-left: 20px;
+}
+
+.logofooter{
+    display: flex;
+    margin-top: 50px;
+}
+
+.copyright{
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.ubicacion{
+    font-size: 15px;
+    margin-bottom: -10px;
+}
+
+/*Pon esto, es todo lo del footer, para que sea responsive*/
+
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    footer .row {
+        text-align: center;
+    }
+    .logofooter {
+        margin-top: 15px;
+        margin-left: -5px;
+    }
+}
+
+/*Pon esto, es todo lo del footer, para que sea responsive*/
+
+@media (max-width: 768px) {
+    .contacto {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    .contacto img{
+        margin-left: -10px;
+    }
+    .textocontacto{
+        margin-left: 0px;
+        margin-top: 10px;
+        text-align: center;
+    } 
+}
+
+@media (max-width: 768px) {
+    .filtro{
+        display: none;
+        position: absolute;
+        background: white;
+        top: 300px;
+        right: 0px;
+        left: 230px;
+        padding: 30px;
+        padding-right: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        z-index: 100;
+        text-align: center;
+        gap: 10px;
+        width: 40%;
+    }
+    .mostrar-filtros {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .filtro.activo{
+        display: block;
+    }
+    .filtro.activo .ingresarBusqueda{
+        margin-left: 95px;
+        margin-bottom: -25px;
+    }
+    .filtro.activo .tiposproductosclass{
+        margin-top: 15px;
+        margin-left: 20px;
+        padding-right: 35px;
+        margin-bottom: 15px;
+    }
+    .filtro.activo .precio{
+        margin-top: 10px;
+    }
+    .filtro.activo .AplicarFiltro{
+        margin-left: 75px;
+        margin-bottom: 10px;
+    }
+    .filtro.activo .LimpiarFiltroId{
+        margin-left: 75px;
+        margin-bottom: 10px;
+    }
+    .catalogo{
+        margin: auto;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 425px){
+    .filtro{
+        top: 340px;
+        width: 100%;
+        left: 0px;
+        right: 0px;
+        display: none;
+    }
+    .filtro.activo .TituloFiltro{
+        margin-left: -30px;
+    }
+    .filtro.activo .textoFiltro{
+        margin-left: -30px;
+    }
+    .filtro.activo .busquedaclass{
+        margin-left: -30px;
+        margin-right: 0px;
+    }
+    .filtro.activo .ingresarBusqueda{
+        margin-left: 130px;
+        margin-bottom: -25px;
+    }
+    .filtro.activo .AplicarFiltro{
+        margin-left: 110px;
+        margin-bottom: 10px;
+    }
+    .filtro.activo .LimpiarFiltroId{
+        margin-left: 109px;
+    }
+}
+
+@media (max-width: 375px){
+    .filtro{
+        top: 350px;
+        width: 100%;
+        left: 0px;
+        right: 0px;
+        display: none;
+    }
+    .filtro.activo .TituloFiltro{
+        margin-left: -30px;
+    }
+    .filtro.activo .textoFiltro{
+        margin-left: -30px;
+    }
+    .filtro.activo .busquedaclass{
+        margin-left: -30px;
+        margin-right: 0px;
+    }
+    .filtro.activo .ingresarBusqueda{
+        margin-left: 105px;
+        margin-bottom: -25px;
+    }
+    .filtro.activo .AplicarFiltro{
+        margin-left: 85px;
+        margin-bottom: 10px;
+    }
+    .filtro.activo .LimpiarFiltroId{
+        margin-left: 85px;
+    }
+}
+
+@media (max-width: 320px){
+    
+    .filtro{
+        top: 340px;
+        width: 100%;
+        left: 0px;
+        right: 0px;
+        display: none;
+    }
+    .filtro.activo .ingresarBusqueda{
+        margin-left: 80px;
+        margin-bottom: -25px;
+    }
+    .filtro.activo .AplicarFiltro{
+        margin-left: 60px;
+        margin-bottom: 10px;
+    }
+    .filtro.activo .tiposproductosclasstexto{
+        margin-left: -20px;
+    }
+    .filtro.activo .tiposproductosclass{
+        margin-left: 10px;
+        padding-right: 10px;
+    }
+    .filtro.activo .preciotexto{
+        margin-left: -10px;
+    }
+    .filtro.activo .LimpiarFiltroId{
+        margin-left: 60px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 1024px){
+    html, body{
+        overflow-x: hidden;
+    }
+    .catalogo{
+        margin-right: auto;
+    }
+    .nav-item {
+        padding-right: 200px;
+    }
+    .filtro .ingresarBusqueda{
+        margin-left: 60px;
+    }
+    .filtro .AplicarFiltro{
+        margin-left: 40px;
+    }
+    .filtro .LimpiarFiltroId{
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 1440px){
+    html, body{
+        overflow-x: hidden;
+    }
+}
